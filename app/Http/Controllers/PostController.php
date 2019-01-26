@@ -12,7 +12,7 @@ class PostController extends Controller
         return response()->json(['data' => Post::get()->map(function($p) {
             return [
                 'id' => $p->id,
-                'user_id' => $p->user_id,
+                'user' => $p->user,
                 'images' => $p->images,
                 'description' => $p->description,
                 'location' => $p->location,
